@@ -1,0 +1,55 @@
+@import '../../assets/css/variables.css';
+
+.graphContainerInner {
+	order: 3;
+
+	& .graphInner {
+		min-height: 435px;
+		padding-bottom: 20px;
+
+		@media (--screen-lg) {
+			min-height: 470px;
+		}
+
+		& > div {
+			& svg {
+				height: 450px !important;
+			}
+		}
+
+		@media (--screen-lg) {
+			padding-bottom: 5px;
+
+			& > div {
+				& svg {
+					height: 450px !important;
+				}
+			}
+		}
+	}
+
+	& .graphPlaceholder {
+		position: relative;
+		min-height: 425px;
+	}
+
+	& :global {
+		& div {
+			& text {
+				font-size: 6px;
+
+				@media (--screen-lg) {
+					font-size: var(--size-small-mobile);
+				}
+			}
+
+			& rect {
+				clip-path: inset(0 0 0 0 round 2px 2px 0 0);
+
+				@media (--screen-lg) {
+					clip-path: inset(0 0 0 0 round 4px 4px 0 0);
+				}
+			}
+		}
+	}
+}

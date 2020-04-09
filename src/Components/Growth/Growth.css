@@ -1,0 +1,83 @@
+@import '../../assets/css/variables.css';
+
+.graphContainerInner {
+	order: 1;
+
+	& .graphInner {
+		min-height: 431px;
+
+		@media (--screen-lg) {
+			min-height: 516px;
+		}
+
+		& > div {
+			& svg {
+				@media (hover: hover) {
+					& path {
+						&:hover {
+							stroke-width: 3px;
+						}
+					}
+				}
+
+				& path {
+					stroke-width: 2px;
+					fill: transparent;
+					transition: all 0.3s ease;
+				}
+
+				& circle {
+					cursor: pointer;
+					fill: transparent !important;
+					stroke: transparent !important;
+				}
+			}
+		}
+
+		@media (--screen-lg) {
+			padding-bottom: 5px;
+		}
+	}
+
+	& .graphPlaceholder {
+		position: relative;
+		min-height: 441px;
+
+		@media (--screen-lg) {
+			min-height: 499px;
+		}
+	}
+
+	& .legends {
+		@mixin legends;
+		margin-top: 10px;
+
+		@media (--screen-lg) {
+			margin-top: 20px;
+		}
+
+		& li {
+			&.right {
+				flex: 1;
+				text-align: right;
+				font-weight: 500;
+
+				& strong {
+					color: var(--color-dark);
+				}
+			}
+		}
+	}
+
+	& :global {
+		& div {
+			& rect {
+				clip-path: inset(0 0 0 0 round 2px 2px 0 0);
+
+				@media (--screen-lg) {
+					clip-path: inset(0 0 0 0 round 4px 4px 0 0);
+				}
+			}
+		}
+	}
+}

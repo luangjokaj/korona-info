@@ -1,0 +1,62 @@
+@import '../../../assets/css/variables.css';
+
+.loading,
+.spinner {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate3d(0,0,0) translate(-50%, -50%);
+}
+
+.loading {
+	height: 100%;
+	width: 100%;
+
+	&.red {
+		& .spinner div {
+			border: 5px solid var(--color-primary);
+			border-color: var(--color-primary) transparent transparent transparent;
+		}
+	}
+}
+
+.spinner {
+	display: inline-block;
+	width: 64px;
+	height: 64px;
+}
+
+.spinner div {
+	box-sizing: border-box;
+	position: absolute;
+	display: block;
+	width: 51px;
+	height: 51px;
+	margin: 5px;
+	border: 5px solid var(--color-light);
+	border-radius: 50%;
+	animation: spinner 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+	border-color: var(--color-light) transparent transparent transparent;
+}
+
+.spinner div:nth-child(1) {
+	animation-delay: -0.45s;
+}
+
+.spinner div:nth-child(2) {
+	animation-delay: -0.3s;
+}
+
+.spinner div:nth-child(3) {
+	animation-delay: -0.15s;
+}
+
+@keyframes spinner {
+	0% {
+		transform: translate3d(0,0,0) rotate(0deg);
+	}
+
+	100% {
+		transform: translate3d(0,0,0) rotate(360deg);
+	}
+}

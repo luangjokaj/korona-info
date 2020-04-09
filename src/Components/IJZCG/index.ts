@@ -1,0 +1,1 @@
+export { Ijzcg } from './Ijzcg';

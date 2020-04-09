@@ -1,0 +1,70 @@
+@import '../../../assets/css/variables.css';
+
+.box {
+	border: solid 1px var(--color-gray-light);
+	border-radius: 5px;
+	line-height: 1;
+	box-shadow: 0 5px 25px -5px color-mod(var(--color-dark) alpha(16%));
+	padding-top: 10px;
+	padding-bottom: 10px;
+	min-height: calc(100% - 10px);
+	transition: all 0.3s ease;
+
+	@media (--screen-lg) {
+		padding-bottom: 0;
+	}
+
+	&.loaded {
+		& :global {
+			& rect {
+				transform: scaleY(1);
+				opacity: 1 !important;
+
+				&:hover {
+					opacity: 0.5 !important;
+				}
+			}
+		}
+	}
+
+	&.didResize {
+		& :global {
+			& rect {
+				clip-path: inset(0 0 0 0 round 4px 4px 0 0);
+			}
+		}
+	}
+
+	& :global {
+		& .rv-xy-plot__series {
+			overflow: hidden;
+		}
+
+		& rect {
+			transform-origin: bottom;
+			transform: scaleY(0);
+			opacity: 0 !important;
+			transition: 0.5s all ease;
+			clip-path: inset(0 0 0 0 round 5px 5px 0 0);
+		}
+
+		& line {
+			stroke: color-mod(var(--color-gray-light) alpha(50%));
+		}
+
+		& .rv-xy-plot  {
+			position: relative;
+		}
+
+		& text {
+			font-family: var(--font-text);
+			font-size: 9px;
+			font-weight: 400;
+			fill: var(--color-tertiary);
+
+			@media (--screen-lg) {
+				font-size: var(--size-small-mobile);
+			}
+		}
+	}
+}

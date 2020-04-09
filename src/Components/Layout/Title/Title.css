@@ -1,0 +1,35 @@
+@import '../../../assets/css/variables.css';
+
+.title {
+	margin-top: 40px;
+	margin-bottom: 40px;
+
+	&.first {
+		margin-top: 20px;
+
+		@media (--screen-lg) {
+			margin-top: 20px;
+		}
+	}
+
+	&.second {
+		margin-top: 30px;
+
+		@media (--screen-lg) {
+			margin-top: 20px;
+		}
+	}
+
+	&.smaller {
+		font-size: var(--size-h5-mobile);
+		white-space: nowrap;
+		text-overflow: ellipsis;
+		overflow: hidden;
+
+		@media (--screen-lg) {
+			margin-top: 30px;
+			margin-bottom: 30px;
+			font-size: var(--size-h4-desktop);
+		}
+	}
+}

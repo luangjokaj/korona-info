@@ -1,0 +1,11 @@
+@import './variables.css';
+
+.graphContainer {
+	display: block;
+	padding: 20px 0;
+	position: relative;
+
+	& > * {
+		margin: auto;
+	}
+}

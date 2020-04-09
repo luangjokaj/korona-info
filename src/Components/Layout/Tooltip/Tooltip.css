@@ -1,0 +1,30 @@
+@import '../../../assets/css/variables.css';
+
+.toolTip {
+	background: var(--color-light);
+	box-shadow: 0 5px 25px 0 color-mod(var(--color-dark) alpha(20%));
+	border: solid 1px var(--color-gray-light);
+	border-radius: 5px;
+	padding: 10px;
+	font-size: var(--size-text-mobile);
+	font-weight: 700;
+	position: absolute;
+	left: 50%;
+	transform: translateX(-50%);
+	bottom: 5px;
+	pointer-events: none;
+	z-index: 20;
+	
+	&:before {
+		content: '';
+		display: block;
+		position: absolute;
+		left: 50%;
+		bottom: 0;
+		width: 20px;
+		height: 20px;
+		z-index: -2;
+		background: var(--color-light);
+		transform: translateX(-50%) rotate(45deg);
+	}
+}

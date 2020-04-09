@@ -1,0 +1,82 @@
+@import '../../assets/css/variables.css';
+
+.footer {
+	text-align: center;
+	padding: 20px 0 30px 0;
+
+	@media (--screen-lg) {
+		padding: 50px 0 30px 0;
+	}
+
+	& p {
+		padding-bottom: 20px;
+		color: var(--color-tertiary);
+
+		&.small {
+			@mixin small;
+			display: block;
+			max-width: 700px;
+			margin: auto;
+			padding: 0 0 10px 0;
+			color: var(--color-secondary);
+		}
+
+		&.github {
+			padding: 0;
+		}
+
+		& em {
+			font-style: normal;
+			font-size: var(--size-small-mobile);
+		}
+
+		& a {
+			font-size: var(--size-small-mobile);
+			font-weight: 700;
+			margin: 0;
+			padding: 0 5px;
+
+			@media (hover: hover) {
+				&:hover {
+					color: var(--color-dark);
+				}
+			}
+
+
+			@media (--screen-lg) {
+				padding: 0 10px;
+			}
+		}
+	}
+
+	& a {
+		display: inline-block;
+		margin: auto;
+		box-sizing: border-box;
+		padding: 20px;
+		transition: all .5s ease;
+
+		&.riangleLink {
+			padding-top: 30px;
+		}
+
+		& svg {
+			display: inline-block;
+			transition: all .5s ease;
+		}
+
+		@media (hover: hover) {
+			&:hover {
+				& svg {
+					transform: perspective(400px) rotateY(180deg) scale(1.05);
+				}
+			}
+		}
+
+		&:active {
+			& svg {
+				transform: perspective(400px) rotateY(180deg) scale(0.95);
+			}
+		}
+	}
+}

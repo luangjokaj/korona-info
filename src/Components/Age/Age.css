@@ -1,0 +1,30 @@
+@import '../../assets/css/variables.css';
+
+.graphContainerInner {
+	order: 6;
+
+	&[data-col] {
+		min-height: 316px;
+
+		@media (--screen-lg) {
+			min-height: 349px;
+		}
+	}
+
+	@media (--screen-lg) {
+		order: 5;
+	}
+
+	& .graphInner {
+		padding-bottom: 0;
+	}
+
+	& .graphPlaceholder {
+		min-height: 200px;
+		position: relative;
+
+		@media (--screen-lg) {
+			min-height: 250px;
+		}
+	}
+}

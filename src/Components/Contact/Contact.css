@@ -1,0 +1,159 @@
+@import '../../assets/css/variables.css';
+
+.contact {
+	order: 7;
+	padding-top: 20px;
+	margin: 0;
+
+	&[data-col] {
+		min-height: 76px;
+	}
+
+	@media (--screen-lg) {
+		margin: 20px 0 0;
+		padding-top: 0;
+	}
+
+	& > div {
+		& > div {
+			transition: all 0.3s ease;
+			box-shadow: 0 5px 25px -5px color-mod(var(--color-dark) alpha(16%));
+			border: solid 1px var(--color-gray-light);
+			border-radius: 5px;
+			overflow: hidden;
+
+			@media (hover: hover) {
+				&:hover {
+					box-shadow: 0 0 15px -10px color-mod(var(--color-dark) alpha(30%));
+				}
+			}
+		}
+	}
+
+	& .contactHead {
+		&.active {
+			& button {
+				color: var(--color-tertiary);
+				border-bottom: solid 1px var(--color-gray-light);
+
+				&:after {
+					transform: translate3d(0,0,0) translateY(-50%) rotate(180deg);
+				}
+			}
+
+			& .body {
+				overflow-y: auto;
+				-webkit-overflow-scrolling: touch;
+				max-height: 1400px;
+				padding: 20px;
+
+				@media (--screen-lg) {
+					max-height: 940px;
+					height: 940px;
+				}
+			}
+		}
+
+		& button {
+			appearance: none;
+			border: none;
+			background: transparent;
+			vertical-align: middle;
+			padding: 20px 40px 20px 20px;
+			border-bottom: solid 1px transparent;
+			width: 100%;
+			text-align: left;
+			font-size: var(--size-text-mobile);
+			position: relative;
+			transition: all 0.3s ease;
+			font-weight: 500;
+			color: var(--color-dark);
+
+			&:active {
+				& img {
+					transform: translate3d(0,0,0) scale(0.90);
+				}
+			}
+
+			@media (hover: hover) {
+				&:hover {
+					color: var(--color-primary);
+				}
+			}
+
+			
+			& svg,
+			& span {
+				display: inline-block;
+				line-height: 1;
+				vertical-align: middle;
+			}
+
+			& svg {
+				margin-right: 20px;
+				transform: translate3d(0,0,0) scale(1);
+				transition: all 0.3s ease;
+			}
+
+			&:after {
+				content: '';
+				display: inline-block;
+				width: 18px;
+				height: 18px;
+				background: url('https://korona-info.s3-eu-west-1.amazonaws.com/img/arrow.svg') no-repeat center center;
+				position: absolute;
+				right: 20px;
+				top: 50%;
+				transform: translate3d(0,0,0) translateY(-50%);
+				transition: all 0.3s ease;
+				overflow: hidden;
+			}
+		}
+
+		& .body {
+			max-height: 0;
+			overflow: hidden;
+			transition: all 0.3s ease;
+			padding: 0 20px;
+
+			@media (--screen-lg) {
+				height: 0;
+			}
+
+			& hr {
+				margin: 20px 0;
+			}
+
+			& strong {
+				color: var(--color-dark);
+			}
+
+			& a {
+				font-weight: 700;
+				font-style: normal;
+				color: var(--color-primary);
+
+				@media (hover: hover) {
+					&:hover {
+						color: var(--color-secondary);
+					}
+				}
+			}
+
+			
+			& .small {
+				font-size: var(--size-small-desktop);
+				line-height: var(--lineheight-small-desktop);
+			}
+
+			& p {
+				margin: 0;
+				font-size: var(--size-small-mobile);
+
+				& strong {
+					color: var(--color-dark);
+				}
+			}
+		}
+	}
+}

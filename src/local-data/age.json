@@ -1,0 +1,44 @@
+{
+	"data": [
+		[
+			["Starost", "Ukupno oboljelih"],
+			["0-9", "14"],
+			["10-19", "29"],
+			["20-29", "34"],
+			["30-39", "32"],
+			["40-49", "45"],
+			["50-59", "41"],
+			["60-69", "28"],
+			["70-79", "19"],
+			["80-89", "10"],
+			["90+", "0"]
+		]
+	],
+	"sheetNames": ["KUM. STAROST"],
+	"allSheetNames": [
+		"PO DATUMIMA",
+		"PO DATUMIMA BEZ TRENUTNIH",
+		"BROJ slučajeva (INDEKSNI ILI IZ",
+		"PO OPŠTINAMA",
+		"UKUPNO OBOLJELIH",
+		"TRENUTNO OBOLJELIH",
+		"HOSPITALIZOVANIH",
+		"OPORAVLJENO",
+		"UMRLO",
+		"POD NADZOROM",
+		"POL",
+		"KUMULATIVNO STANJE",
+		"KUM. STAROST",
+		"KUMULATIVNO OBOLJELIH",
+		"KUMULATIVNO TRENUTNO OBOLJELIH",
+		"KUMULATIVNO HOSPITALIZOVANO",
+		"KUMULATIVNO OPORAVLJENO",
+		"KUMULATIVNO UMRLO",
+		"KUMULATIVNO NADZOR",
+		"KUMULATIVNO POL",
+		"KUMULATIVNO NAČIN INFICIRANJA",
+		"KUM. NAČ INFICIRANJA PROCENTI",
+		"KUM. STAROST VERTIKALNO"
+	],
+	"refreshed": 1586455249455
+}

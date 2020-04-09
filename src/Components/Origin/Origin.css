@@ -1,0 +1,45 @@
+@import '../../assets/css/variables.css';
+
+.graphContainerInner {
+	order: 5;
+
+	&[data-col] {
+		min-height: 316px;
+
+		@media (--screen-lg) {
+			min-height: 349px;
+		}
+	}
+
+	@media (--screen-lg) {
+		order: 6;
+	}
+
+	& .graphInner {
+		height: 243px;
+		padding-bottom: 0;
+
+		@media (--screen-lg) {
+			height: initial;
+		}
+
+		& > div {
+			& svg {
+				height: 220px;
+
+				@media (--screen-lg) {
+					height: initial;
+				}
+			}
+		}
+	}
+
+	& .graphPlaceholder {
+		min-height: 200px;
+		position: relative;
+
+		@media (--screen-lg) {
+			min-height: 250px;
+		}
+	}
+}

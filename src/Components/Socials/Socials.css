@@ -1,0 +1,48 @@
+@import '../../assets/css/variables.css';
+
+.socials {
+	@mixin noList;
+	display: flex;
+	margin: auto 0;
+	justify-content: flex-end;
+
+	& li {
+		margin-left: 10px;
+
+		& button {
+			transition: all 0.3s ease;
+			transform: translate3d(0,0,0) scale(1);
+
+			@media (hover: hover) {
+				&:hover {
+					transform: translate3d(0,0,0) scale(1.1);
+				}
+			}
+
+			&:active {
+				transform: translate3d(0,0,0) scale(0.90);
+			}
+		}
+
+		&.hide {
+			@media (--screen-lg) {
+				display: none;
+			}
+		}
+	}
+
+	& .shareButton,
+	& .shareCount {
+		vertical-align: middle;
+		line-height: 1;
+	}
+
+	& .shareCount {
+		color: var(--color-light);
+		font-size: var(--size-small-desktop);
+		font-weight: 500;
+		padding-left: 10px;
+		display: inline-block;
+		transform: translateY(-1px);
+	}
+}

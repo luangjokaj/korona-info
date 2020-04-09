@@ -1,0 +1,105 @@
+@import '../../assets/css/variables.css';
+
+@import '../../assets/css/variables.css';
+
+.graphContainerInner {
+	order: 7;
+
+	& .graphInner {
+		min-height: 474px;
+
+		@media (--screen-lg) {
+			min-height: 464px;
+			max-height: 500px;
+		}
+
+		& > div {
+			padding-top: 10px;
+			padding-bottom: 20px;
+
+			@media (--screen-lg) {
+				padding-bottom: 20px;
+				padding-top: 0;
+			}
+
+			& svg {
+				@media (hover: hover) {
+					& path {
+						&:hover {
+							stroke-width: 3px;
+						}
+					}
+				}
+
+				& path {
+					stroke-width: 2px;
+					fill: transparent;
+					transition: all 0.3s ease;
+				}
+
+				& circle {
+					cursor: pointer;
+					fill: transparent !important;
+					stroke: transparent !important;
+				}
+			}
+		}
+
+		@media (--screen-lg) {
+			padding-bottom: 5px;
+
+			& > div {
+				& svg {
+					height: 413px !important;
+				}
+			}
+		}
+	}
+
+	& .graphPlaceholder {
+		position: relative;
+		min-height: 451px;
+
+		@media (--screen-lg) {
+			min-height: 449px;
+		}
+	}
+
+	& .legends {
+		@mixin legends;
+		margin-top: 20px;
+
+		& li {
+			&.right {
+				flex: 1;
+				text-align: right;
+				font-weight: 500;
+
+				& strong {
+					color: var(--color-dark);
+				}
+			}
+		}
+	}
+
+	& :global {
+		& text {
+			font-family: var(--font-text);
+			font-size: 6px;
+			font-weight: 400;
+			fill: var(--color-tertiary);
+
+			@media (--screen-lg) {
+				font-size: 9px;
+			}
+		}
+
+		& .rv-xy-plot__axis--horizontal {
+			& .rv-xy-plot__axis__ticks {
+				& * {
+					clear: both;
+				}
+			}
+		}
+	}
+}

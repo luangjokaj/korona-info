@@ -111,7 +111,7 @@
 		padding: 10px;
 		border: solid 1px color-mod(var(--color-light) alpha(30%));
 		margin: 0 0 20px 0;
-		border-radius: 5px;
+		border-radius: 30px;
 		background: color-mod(var(--color-light) alpha(0%));
 		transition: all 0.3s ease;
 		transform: translate3d(0,0,0) scale(1);
@@ -148,6 +148,7 @@
 			font-size: var(--size-small-desktop);
 			font-weight: 500;
 			color: var(--color-light);
+			margin-left: 5px;
 
 			@media (max-width: 360px) {
 				display: none;
@@ -155,9 +156,7 @@
 		}
 
 		& svg {
-			@media (max-width: 320px) {
-				width: 32px;
-			}
+			width: 32px;
 		}
 	}
 }

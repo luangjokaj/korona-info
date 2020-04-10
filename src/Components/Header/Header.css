@@ -97,9 +97,6 @@
 	display: flex;
 	justify-content: flex-end;
 
-	@media (--screen-lg) {
-	}
-
 	&[data-col="true"] {
 		padding-right: 0;
 	}
@@ -147,6 +144,16 @@
 			font-size: var(--size-small-desktop);
 			font-weight: 500;
 			color: var(--color-light);
+
+			@media (max-width: 360px) {
+				display: none;
+			}
+		}
+
+		& svg {
+			@media (max-width: 320px) {
+				width: 32px;
+			}
 		}
 	}
 }

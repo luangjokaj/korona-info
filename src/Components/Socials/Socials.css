@@ -44,5 +44,9 @@
 		padding-left: 10px;
 		display: inline-block;
 		transform: translateY(-1px);
+
+		@media (max-width: 380px) {
+			display: none;
+		}
 	}
 }

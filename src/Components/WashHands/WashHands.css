@@ -140,6 +140,7 @@
 			z-index: 20;
 			pointer-events: none;
 			opacity: 0;
+			border-radius: 50%;
 
 			&.active {
 				pointer-events: all;
@@ -150,11 +151,13 @@
 				@media (hover: hover) {
 					&:hover {
 						transform: translate3d(0,0,0) translate(-50%, -50%) scale(1.1);
+						transition-delay: 0s;
 					}
 				}
 
 				&:active {
 					transform: translate3d(0,0,0) translate(-50%, -50%) scale(0.90);
+					transition-delay: 0s;
 				}
 			}
 

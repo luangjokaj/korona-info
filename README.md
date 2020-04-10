@@ -86,6 +86,6 @@ npm run start
 
 Ready to deploy 🚀
 
-![preview](https://i.imgur.com/5ZcWCVQ.png)
+![preview](https://i.imgur.com/e5XokNE.png)
 
 ---

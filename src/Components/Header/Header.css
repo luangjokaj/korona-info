@@ -95,19 +95,22 @@
 	position: relative;
 	line-height: 1;
 	display: flex;
-	justify-content: flex-end;
 
 	&[data-col="true"] {
 		padding-right: 0;
 	}
 
+	@media (--screen-lg) {
+		display: block;
+	}
+
 	& .handSanitizer {
 		@mixin resetButton;
-		flex: 1;
+		display: inline-block;
 		line-height: 1;
 		padding: 10px;
 		border: solid 1px color-mod(var(--color-light) alpha(30%));
-		margin: -2px 0 20px 0;
+		margin: 0 0 20px 0;
 		border-radius: 5px;
 		background: color-mod(var(--color-light) alpha(0%));
 		transition: all 0.3s ease;
@@ -115,11 +118,12 @@
 		overflow: hidden;
 		text-overflow: ellipsis;
 		white-space: nowrap;
+		flex: 1;
 
 		@media (--screen-lg) {
+			flex: none;
 			padding: 10px 20px;
-			margin: -2px 0 auto 0;
-			flex: initial;
+			margin: -3px 10px 0 0;
 		}
 
 		@media (hover: hover) {

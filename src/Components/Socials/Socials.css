@@ -2,9 +2,15 @@
 
 .socials {
 	@mixin noList;
-	display: flex;
-	margin: 10px 0 auto 10px;
+	display: inline-flex;
+	margin: 0 0 10px 0;
+	padding: 10px 0;
 	justify-content: flex-end;
+	transform: translateY(2px);
+
+	@media (--screen-lg) {
+		padding: 7px 0;
+	}
 
 	& li {
 		margin-left: 10px;

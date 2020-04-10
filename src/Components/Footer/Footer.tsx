@@ -8,7 +8,7 @@ function Footer() {
 			<p className={styles.small}>
 				Ovo je web-stranica sa otvorenim kodom za praćenje epidemije
 				COVID-19 u Crnoj Gori. Podaci potječu iz miješanog niza izvora,
-				uključujući službenu statistiku Instituta za javno zdravlje Crne
+				uključujući službenu statistiku Instituta za Javno Zdravlje Crne
 				Gore (IJZCG).
 			</p>
 			<p className={styles.small}>

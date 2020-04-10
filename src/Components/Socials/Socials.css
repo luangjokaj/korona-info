@@ -3,7 +3,7 @@
 .socials {
 	@mixin noList;
 	display: flex;
-	margin: auto 0;
+	margin: 10px 0 auto 10px;
 	justify-content: flex-end;
 
 	& li {

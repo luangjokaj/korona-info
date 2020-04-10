@@ -94,16 +94,60 @@
 	text-align: right;
 	position: relative;
 	line-height: 1;
-	padding-top: 8px;
-	padding-bottom: 20px;
+	display: flex;
+	justify-content: flex-end;
 
 	@media (--screen-lg) {
-		padding-top: 10px;
-		padding-bottom: 0;
 	}
 
 	&[data-col="true"] {
 		padding-right: 0;
+	}
+
+	& .handSanitizer {
+		@mixin resetButton;
+		flex: 1;
+		line-height: 1;
+		padding: 10px;
+		border: solid 1px color-mod(var(--color-light) alpha(30%));
+		margin: -2px 0 20px 0;
+		border-radius: 5px;
+		background: color-mod(var(--color-light) alpha(0%));
+		transition: all 0.3s ease;
+		transform: translate3d(0,0,0) scale(1);
+		overflow: hidden;
+		text-overflow: ellipsis;
+		white-space: nowrap;
+
+		@media (--screen-lg) {
+			padding: 10px 20px;
+			margin: -2px 0 auto 0;
+			flex: initial;
+		}
+
+		@media (hover: hover) {
+			&:hover {
+				background: color-mod(var(--color-light) alpha(20%));
+				transform: translate3d(0,0,0) scale(1.1);
+			}
+		}
+
+		&:active {
+			transform: translate3d(0,0,0) scale(0.90);
+		}
+
+		& svg,
+		& em {
+			vertical-align: middle;
+			line-height: 1;
+		}
+
+		& em {
+			font-style: normal;
+			font-size: var(--size-small-desktop);
+			font-weight: 500;
+			color: var(--color-light);
+		}
 	}
 }
 

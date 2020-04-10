@@ -1,0 +1,1 @@
+export { WashHands } from './WashHands';

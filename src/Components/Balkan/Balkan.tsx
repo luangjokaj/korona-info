@@ -41,19 +41,31 @@ function Balkan({ xs, lg, loaded, className }: BalkanProps) {
 	const [mkHistory, setMkHistory] = useState([]);
 	const [rsHistory, setRsHistory] = useState([]);
 	const [siHistory, setSiHistory] = useState([]);
-	const [fullWindowWidth, setFullWindowWidth] = useState();
+	const [windowWidth, setWindowWidth] = useState();
 	const [didResize, setDidResize] = useState(false);
 	const [hoveredCell, setHoveredCell] = useState(false);
 
 	const myGraph = useRef(null);
 
 	const initiateSize = () => {
-		const winWidth =
-			window.innerWidth > 992
-				? myGraph.current.offsetWidth - 10
-				: myGraph.current.offsetWidth - 10;
-		setFullWindowWidth(winWidth);
+		const winWidth = myGraph.current.offsetWidth - 10;
+		setWindowWidth(winWidth);
 	};
+
+	let resizeTimeout;
+
+	function handleResize() {
+		clearTimeout(resizeTimeout);
+		resizeTimeout = setTimeout(trigger, 1000);
+
+		function trigger() {
+			initiateSize();
+			setDidResize(!didResize);
+			console.log('Resized 🖥');
+		}
+	}
+
+	window.addEventListener('resize', handleResize);
 
 	const loadData = (api, func, localData) => {
 		let arr = [];
@@ -75,14 +87,6 @@ function Balkan({ xs, lg, loaded, className }: BalkanProps) {
 				console.log('Error fetching data 🚨');
 			});
 	};
-
-	function handleResize() {
-		initiateSize();
-		setDidResize(!didResize);
-		console.log('Resized 🖥');
-	}
-
-	window.addEventListener('resize', handleResize);
 
 	useEffect(() => {
 		loadData(
@@ -168,11 +172,11 @@ function Balkan({ xs, lg, loaded, className }: BalkanProps) {
 						mkHistory.length >= 1 &&
 						rsHistory.length >= 1 &&
 						siHistory.length >= 1 &&
-						fullWindowWidth > 0 && (
+						windowWidth > 0 && (
 							<>
 								<XYPlot
 									xType="ordinal"
-									width={fullWindowWidth}
+									width={windowWidth}
 									height={400}
 								>
 									<VerticalGridLines />

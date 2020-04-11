@@ -40,12 +40,24 @@ function Growth({ xs, lg, loaded, className }: GrowthProps) {
 	const myGraph = useRef(null);
 
 	const initiateSize = () => {
-		const winWidth =
-			window.innerWidth > 992
-				? myGraph.current.offsetWidth - 10
-				: myGraph.current.offsetWidth - 10;
+		const winWidth = myGraph.current.offsetWidth - 10;
 		setWindowWidth(winWidth);
 	};
+
+	let resizeTimeout;
+
+	function handleResize() {
+		clearTimeout(resizeTimeout);
+		resizeTimeout = setTimeout(trigger, 1000);
+
+		function trigger() {
+			initiateSize();
+			setDidResize(!didResize);
+			console.log('Resized 🖥');
+		}
+	}
+
+	window.addEventListener('resize', handleResize);
 
 	const loadData = (API, func, localData) => {
 		fetch(API)
@@ -66,14 +78,6 @@ function Growth({ xs, lg, loaded, className }: GrowthProps) {
 				console.log('Error fetching data 🚨');
 			});
 	};
-
-	function handleResize() {
-		initiateSize();
-		setDidResize(!didResize);
-		console.log('Resized 🖥');
-	}
-
-	window.addEventListener('resize', handleResize);
 
 	useEffect(() => {
 		loadData(

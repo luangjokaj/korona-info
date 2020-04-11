@@ -26,18 +26,30 @@ interface WorldProps {
 function World({ xs, lg, loaded, className }: WorldProps) {
 	const [allHistory, setAllHistory] = useState([]);
 	const [hoveredCell, setHoveredCell] = useState(false);
-	const [fullWindowWidth, setFullWindowWidth] = useState();
+	const [windowWidth, setWindowWidth] = useState();
 	const [didResize, setDidResize] = useState(false);
 
 	const myGraph = useRef(null);
 
 	const initiateSize = () => {
-		const winWidth =
-			window.innerWidth > 992
-				? myGraph.current.offsetWidth - 10
-				: myGraph.current.offsetWidth - 10;
-		setFullWindowWidth(winWidth);
+		const winWidth = myGraph.current.offsetWidth - 10;
+		setWindowWidth(winWidth);
 	};
+
+	let resizeTimeout;
+
+	function handleResize() {
+		clearTimeout(resizeTimeout);
+		resizeTimeout = setTimeout(trigger, 1000);
+
+		function trigger() {
+			initiateSize();
+			setDidResize(!didResize);
+			console.log('Resized 🖥');
+		}
+	}
+
+	window.addEventListener('resize', handleResize);
 
 	const loadData = (api, func, localData) => {
 		let arr = [];
@@ -59,14 +71,6 @@ function World({ xs, lg, loaded, className }: WorldProps) {
 				console.log('Error fetching data 🚨');
 			});
 	};
-
-	function handleResize() {
-		initiateSize();
-		setDidResize(!didResize);
-		console.log('Resized 🖥');
-	}
-
-	window.addEventListener('resize', handleResize);
 
 	useEffect(() => {
 		loadData(
@@ -95,11 +99,11 @@ function World({ xs, lg, loaded, className }: WorldProps) {
 							<Loading red />
 						</div>
 					)}
-					{allHistory.length >= 1 && fullWindowWidth > 0 && (
+					{allHistory.length >= 1 && windowWidth > 0 && (
 						<>
 							<XYPlot
 								xType="ordinal"
-								width={fullWindowWidth}
+								width={windowWidth}
 								height={400}
 							>
 								<VerticalGridLines />

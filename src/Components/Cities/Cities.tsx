@@ -24,24 +24,28 @@ interface CitiesProps {
 }
 
 function Cities({ xs, lg, loaded, className }: CitiesProps) {
-	const [fullWindowWidth, setFullWindowWidth] = useState();
+	const [windowWidth, setWindowWidth] = useState();
 	const [didResize, setDidResize] = useState(false);
 	const [hoveredCell, setHoveredCell] = useState(false);
 
 	const myGraph = useRef(null);
 
 	const initiateSize = () => {
-		const winWidth =
-			window.innerWidth > 992
-				? myGraph.current.offsetWidth - 10
-				: myGraph.current.offsetWidth - 10;
-		setFullWindowWidth(winWidth);
+		const winWidth = myGraph.current.offsetWidth - 10;
+		setWindowWidth(winWidth);
 	};
 
+	let resizeTimeout;
+
 	function handleResize() {
-		initiateSize();
-		setDidResize(!didResize);
-		console.log('Resized 🖥');
+		clearTimeout(resizeTimeout);
+		resizeTimeout = setTimeout(trigger, 1000);
+
+		function trigger() {
+			initiateSize();
+			setDidResize(!didResize);
+			console.log('Resized 🖥');
+		}
 	}
 
 	window.addEventListener('resize', handleResize);
@@ -99,10 +103,10 @@ function Cities({ xs, lg, loaded, className }: CitiesProps) {
 							<Loading red />
 						</div>
 					)}
-					{locations.length > 0 && fullWindowWidth > 0 && (
+					{locations.length > 0 && windowWidth > 0 && (
 						<XYPlot
 							xType="ordinal"
-							width={fullWindowWidth}
+							width={windowWidth}
 							height={400}
 						>
 							<GradientDefs>

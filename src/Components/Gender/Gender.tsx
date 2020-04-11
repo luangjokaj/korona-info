@@ -31,17 +31,21 @@ function Gender({ xs, lg, loaded, className }: GenderProps) {
 	const myGraph = useRef(null);
 
 	const initiateSize = () => {
-		const winWidth =
-			window.innerWidth > 992
-				? myGraph.current.offsetWidth - 10
-				: myGraph.current.offsetWidth - 10;
+		const winWidth = myGraph.current.offsetWidth - 10;
 		setWindowWidth(winWidth);
 	};
 
+	let resizeTimeout;
+
 	function handleResize() {
-		initiateSize();
-		setDidResize(!didResize);
-		console.log('Resized 🖥');
+		clearTimeout(resizeTimeout);
+		resizeTimeout = setTimeout(trigger, 1000);
+
+		function trigger() {
+			initiateSize();
+			setDidResize(!didResize);
+			console.log('Resized 🖥');
+		}
 	}
 
 	window.addEventListener('resize', handleResize);

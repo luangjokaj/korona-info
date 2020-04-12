@@ -251,13 +251,19 @@ function Header() {
 											<strong>
 												{cases >= localData.cases
 													? cases -
-													  deathCases -
+													  (localData.deaths >
+													  deathCases
+															? localData.deaths
+															: deathCases) -
 													  (localData.recovered >
 													  recovered
 															? localData.recovered
 															: recovered)
 													: localData.cases -
-													  deathCases -
+													  (localData.deaths >
+													  deathCases
+															? localData.deaths
+															: deathCases) -
 													  (localData.recovered >
 													  recovered
 															? localData.recovered

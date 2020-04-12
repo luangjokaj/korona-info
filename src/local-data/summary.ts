@@ -1,8 +1,8 @@
 export const localData = {
-	cases: 252,
-	deaths: 2,
-	recovered: 3,
-	hospitalized: 42,
-	surveillanced: 7391,
-	tests: 2329,
+	cases: 267,
+	deaths: 3,
+	recovered: 5,
+	hospitalized: 41,
+	surveillanced: 7605,
+	tests: 2869,
 };

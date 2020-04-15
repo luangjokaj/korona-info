@@ -97,9 +97,9 @@
 		& .rv-xy-plot__axis--horizontal {
 			& .rv-xy-plot__axis__ticks {
 				& * {
-					&:nth-child(odd) {
+					/* &:nth-child(odd) {
 						display: none;
-					}
+					} */
 				}
 			}
 		}

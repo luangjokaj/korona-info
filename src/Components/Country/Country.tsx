@@ -29,7 +29,7 @@ function Country({
 }: CountryProps) {
 	const [posts, setPosts] = useState<any>([]);
 
-	const API = 'https://corona.lmao.ninja/countries/' + countrySlug;
+	const API = 'https://corona.lmao.ninja/v2/countries/' + countrySlug;
 
 	const loadPosts = () => {
 		fetch(API)

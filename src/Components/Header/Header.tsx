@@ -53,7 +53,7 @@ function Header() {
 	};
 
 	const loadTests = async () => {
-		await fetch('https://corona.lmao.ninja/countries/montenegro')
+		await fetch('https://corona.lmao.ninja/v2/countries/montenegro')
 			.then((response) => response.json())
 			.then((data) => {
 				setTestCases(data.tests);

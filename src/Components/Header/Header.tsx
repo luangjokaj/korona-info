@@ -102,7 +102,7 @@ function Header() {
 			localData.deaths,
 		);
 		await loadData(
-			'https://e.infogram.com/api/live/flex/ce347836-1eae-4cc2-af3a-92dbe813adcb/d79bbee6-de80-4fa4-9c72-e63199c4e430?',
+			'https://e.infogram.com/api/live/flex/ce347836-1eae-4cc2-af3a-92dbe813adcb/9da24b99-1fa4-41c8-86d1-08471a875132?',
 			setRecovered,
 			true,
 			localData.recovered,

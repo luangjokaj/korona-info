@@ -55,7 +55,7 @@ function Age({ xs, lg, loaded, className }: AgeProps) {
 	const loadData = () => {
 		let arr: any = [];
 		fetch(
-			'https://e.infogram.com/api/live/flex/ce347836-1eae-4cc2-af3a-92dbe813adcb/25c8ac9b-0380-4650-b0cd-40e9c3af9758?',
+			'https://e.infogram.com/api/live/flex/ce347836-1eae-4cc2-af3a-92dbe813adcb/16998558-359b-456a-a622-faa48ea3f9ea?',
 		)
 			.then((response) => response.json())
 			.then((data) => {

@@ -81,22 +81,22 @@ function Growth({ xs, lg, loaded, className }: GrowthProps) {
 
 	useEffect(() => {
 		loadData(
-			'https://e.infogram.com/api/live/flex/ce347836-1eae-4cc2-af3a-92dbe813adcb/45bdc2b3-b433-4dc2-9a4c-792a189cc30e?',
+			'https://e.infogram.com/api/live/flex/ce347836-1eae-4cc2-af3a-92dbe813adcb/16998558-359b-456a-a622-faa48ea3f9ea?',
 			setPostHistory,
 			casesData,
 		);
 		loadData(
-			'https://e.infogram.com/api/live/flex/ce347836-1eae-4cc2-af3a-92dbe813adcb/7006e237-2c7c-40a7-a288-84faba75bbc1?',
+			'https://e.infogram.com/api/live/flex/ce347836-1eae-4cc2-af3a-92dbe813adcb/c92385f8-d1c2-4f09-886e-5474c46cc211?',
 			setPostHospitalizedHistory,
 			hospitalizedData,
 		);
 		loadData(
-			'https://e.infogram.com/api/live/flex/ce347836-1eae-4cc2-af3a-92dbe813adcb/a5cd0a99-e80c-42a3-a7f7-2f7f64a8ddbb?',
+			'https://e.infogram.com/api/live/flex/ce347836-1eae-4cc2-af3a-92dbe813adcb/434e73bb-a842-4c40-95ff-086e5546424d?',
 			setPostDeathsHistory,
 			deathsData,
 		);
 		loadData(
-			'https://e.infogram.com/api/live/flex/ce347836-1eae-4cc2-af3a-92dbe813adcb/7ef8d49b-d807-47c7-96d4-06f90270b085?',
+			'https://e.infogram.com/api/live/flex/ce347836-1eae-4cc2-af3a-92dbe813adcb/d79bbee6-de80-4fa4-9c72-e63199c4e430?',
 			setPostRecoveredHistory,
 			recoveredData,
 		);

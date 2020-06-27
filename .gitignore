@@ -27,3 +27,6 @@ node_modules
 *.map
 *.log
 *.awcache
+
+# Local Netlify folder
+.netlify

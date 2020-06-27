@@ -55,7 +55,7 @@ function Cities({ xs, lg, loaded, className }: CitiesProps) {
 	const loadData = () => {
 		let arr: any = [];
 		fetch(
-			'https://e.infogram.com/api/live/flex/ce347836-1eae-4cc2-af3a-92dbe813adcb/550413de-4f08-40db-8273-76418d71cd1f?',
+			'https://e.infogram.com/api/live/flex/ce347836-1eae-4cc2-af3a-92dbe813adcb/e5eac604-42e4-4db9-9d02-72b3a5df193a?',
 		)
 			.then((response) => response.json())
 			.then((data) => {
@@ -92,7 +92,9 @@ function Cities({ xs, lg, loaded, className }: CitiesProps) {
 			className={classNames(styles.graphContainerInner, className)}
 		>
 			<div ref={myGraph}>
-				<Title>Gradovi • Cities • Qytetet</Title>
+				<Title>Gradovi • Cities • Qytetet
+				<p>x 100.000 • ljudi • people • njerëz</p>
+				</Title>
 				<Box
 					loaded={locations.length >= 1 && loaded}
 					didResize={didResize}

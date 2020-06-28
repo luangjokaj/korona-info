@@ -102,9 +102,11 @@ module.exports = {
 		new HtmlWebpackPlugin({
 			template: './src/template.html',
 		}),
-		new CopyWebpackPlugin([
-			{ context: './src/assets', from: '**', to: 'assets' },
-		]),
+		new CopyWebpackPlugin({
+			patterns: [
+				{ from: './**', to: './assets', context: './src/assets' },
+			],
+		}),
 		new MiniCssExtractPlugin({
 			filename: '[name].css',
 			chunkFilename: '[name].css',

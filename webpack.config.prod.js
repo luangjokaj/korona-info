@@ -101,9 +101,11 @@ module.exports = {
 			cssProcessorOptions: { discardComments: { removeAll: true } },
 			canPrint: true,
 		}),
-		new CopyWebpackPlugin([
-			{ context: './src/assets', from: '**', to: 'assets' },
-		]),
+		new CopyWebpackPlugin({
+			patterns: [
+				{ from: './**', to: './assets', context: './src/assets' },
+			],
+		}),
 		new webpack.DefinePlugin({
 			'process.env': {
 				NODE_ENV: JSON.stringify('production'),

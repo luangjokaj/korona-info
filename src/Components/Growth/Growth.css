@@ -81,6 +81,14 @@
 		}
 
 		& .rv-xy-plot__axis--horizontal {
+			& text {
+				font-size: 6px;
+
+				@media (--screen-lg) {
+					font-size: 10px;
+				}
+			}
+
 			& .rv-xy-plot__axis__ticks {
 				& * {
 					&:nth-child(odd) {

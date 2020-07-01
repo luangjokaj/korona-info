@@ -55,7 +55,7 @@ function Gender({ xs, lg, loaded, className }: GenderProps) {
 	const loadData = () => {
 		let arr: any = [];
 		fetch(
-			'https://e.infogram.com/api/live/flex/ce347836-1eae-4cc2-af3a-92dbe813adcb/f625d04d-ee63-4fdd-bd54-af6235d2625d?',
+			'https://e.infogram.com/api/live/flex/ce347836-1eae-4cc2-af3a-92dbe813adcb/8b0d967f-ea23-42eb-a917-66b68e32ba30?',
 		)
 			.then((response) => response.json())
 			.then((data) => {

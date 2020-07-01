@@ -56,7 +56,7 @@ function Origin({ xs, lg, loaded, className }: OriginProps) {
 		let arr: any = [];
 
 		fetch(
-			'https://e.infogram.com/api/live/flex/ce347836-1eae-4cc2-af3a-92dbe813adcb/91ef9359-bb1c-4c83-9824-0f3bda51bda9?',
+			'https://e.infogram.com/api/live/flex/ce347836-1eae-4cc2-af3a-92dbe813adcb/9ea85424-d3a3-442b-ac3b-7657b7b50b22?',
 		)
 			.then((response) => response.json())
 			.then((data) => {

@@ -2,8 +2,8 @@
 	"data": [
 		[
 			["", "Broj oboljelih"],
-			["Muškarci", "138"],
-			["Žene", "114"]
+			["Muškarci", "308"],
+			["Žene", "240"]
 		]
 	],
 	"sheetNames": ["KUMULATIVNO POL"],
@@ -30,7 +30,8 @@
 		"KUMULATIVNO POL",
 		"KUMULATIVNO NAČIN INFICIRANJA",
 		"KUM. NAČ INFICIRANJA PROCENTI",
-		"KUM. STAROST VERTIKALNO"
+		"KUM. STAROST VERTIKALNO",
+		"OPORAVLJENI PO OPŠTINAMA"
 	],
-	"refreshed": 1586455285663
+	"refreshed": 1593589863667
 }

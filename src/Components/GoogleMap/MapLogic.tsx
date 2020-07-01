@@ -118,6 +118,7 @@ function DynamicMarker() {
 												<strong>
 													{city.total.toString()}
 												</strong>
+												<p>x 100.000 • ljudi • people • njerëz</p>
 											</span>
 										</InfoWindow>
 									)}

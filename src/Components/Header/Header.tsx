@@ -90,31 +90,31 @@ function Header() {
 		await loadPostsHistory();
 		await loadTests();
 		await loadData(
-			'https://e.infogram.com/api/live/flex/ce347836-1eae-4cc2-af3a-92dbe813adcb/92a76c35-7503-4b29-a609-9077b25a4bec?',
+			'https://e.infogram.com/api/live/flex/ce347836-1eae-4cc2-af3a-92dbe813adcb/475f88b0-e616-47a8-b886-d6fe3a869e3a?',
 			setCases,
 			true,
 			localData.cases,
 		);
 		await loadData(
-			'https://e.infogram.com/api/live/flex/ce347836-1eae-4cc2-af3a-92dbe813adcb/72928a16-a545-4111-b996-33c41e12e664?',
+			'https://e.infogram.com/api/live/flex/ce347836-1eae-4cc2-af3a-92dbe813adcb/73a47eb3-8913-43fa-a257-760062a98bd3?',
 			setDeathCases,
 			true,
 			localData.deaths,
 		);
 		await loadData(
-			'https://e.infogram.com/api/live/flex/ce347836-1eae-4cc2-af3a-92dbe813adcb/8398e99a-43f2-41b8-9a59-e39c8490d564?',
+			'https://e.infogram.com/api/live/flex/ce347836-1eae-4cc2-af3a-92dbe813adcb/eba3f530-8a05-44d0-ac6b-0ab645c78011?',
 			setRecovered,
 			true,
 			localData.recovered,
 		);
 		await loadData(
-			'https://e.infogram.com/api/live/flex/ce347836-1eae-4cc2-af3a-92dbe813adcb/bd85571a-7b85-44fd-b986-dd944de8684e?',
+			'https://e.infogram.com/api/live/flex/ce347836-1eae-4cc2-af3a-92dbe813adcb/73a47eb3-8913-43fa-a257-760062a98bd3?',
 			setHospitalized,
 			true,
 			localData.hospitalized,
 		);
 		await loadData(
-			'https://e.infogram.com/api/live/flex/ce347836-1eae-4cc2-af3a-92dbe813adcb/a0622813-a4c2-4ce0-8a3f-33ab78eee5c6?',
+			'https://e.infogram.com/api/live/flex/ce347836-1eae-4cc2-af3a-92dbe813adcb/5fd0db95-90b4-41d5-814a-58850cc4808d?',
 			setSurveillanced,
 			true,
 			localData.surveillanced,

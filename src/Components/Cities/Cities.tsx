@@ -55,7 +55,7 @@ function Cities({ xs, lg, loaded, className }: CitiesProps) {
 	const loadData = () => {
 		let arr: any = [];
 		fetch(
-			'https://e.infogram.com/api/live/flex/ce347836-1eae-4cc2-af3a-92dbe813adcb/a7140478-8c68-46e4-83c6-a9086c501f56?',
+			'https://e.infogram.com/api/live/flex/ce347836-1eae-4cc2-af3a-92dbe813adcb/cc5ccdf0-a5dd-4466-b34f-e44d122703b5?',
 		)
 			.then((response) => response.json())
 			.then((data) => {

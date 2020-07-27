@@ -35,6 +35,15 @@
 
 	& :global {
 		& div {
+
+			& .rv-xy-plot__axis--vertical {
+				& text {
+					@media (--screen-lg) {
+						font-size: 7px;
+					}
+				}
+			}
+
 			& text {
 				font-size: 6px;
 

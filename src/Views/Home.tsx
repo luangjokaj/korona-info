@@ -34,7 +34,7 @@ const Home = () => {
 					<Growth xs={12} lg={6} loaded={loaded} />
 					<GoogleMap xs={12} lg={6} loaded={loaded} />
 					<Cities xs={12} lg={12} loaded={loaded} />
-					<Gender xs={6} lg={2} loaded={loaded} />
+					<Gender xs={12} lg={2} loaded={loaded} />
 					<Age xs={12} lg={10} loaded={loaded} />
 					<Ijzcg xs={12} lg={12} />
 					<Contact xs={12} lg={4} />

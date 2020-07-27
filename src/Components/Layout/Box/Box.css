@@ -56,9 +56,17 @@
 			position: relative;
 		}
 
+		& .rv-xy-plot__axis--vertical {
+			& text {
+				@media (--screen-lg) {
+					font-size: 7px;
+				}
+			}
+		}
+
 		& text {
 			font-family: var(--font-text);
-			font-size: 9px;
+			font-size: 6px;
 			font-weight: 400;
 			fill: var(--color-tertiary);
 

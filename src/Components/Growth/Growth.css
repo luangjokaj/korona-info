@@ -82,10 +82,10 @@
 
 		& .rv-xy-plot__axis--horizontal {
 			& text {
-				font-size: 6px;
+				font-size: 5px;
 
 				@media (--screen-lg) {
-					font-size: 10px;
+					font-size: 7px;
 				}
 			}
 

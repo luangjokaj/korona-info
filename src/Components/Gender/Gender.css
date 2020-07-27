@@ -12,7 +12,7 @@
 	}
 
 	& .graphInner {
-		height: 243px;
+		height: 230px;
 		padding-bottom: 0;
 
 		@media (--screen-lg) {

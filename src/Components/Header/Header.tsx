@@ -96,7 +96,7 @@ function Header() {
 			localData.cases,
 		);
 		await loadData(
-			'https://e.infogram.com/api/live/flex/ce347836-1eae-4cc2-af3a-92dbe813adcb/73a47eb3-8913-43fa-a257-760062a98bd3?',
+			'https://e.infogram.com/api/live/flex/ce347836-1eae-4cc2-af3a-92dbe813adcb/3bce4506-be21-43b8-9a1a-08db9314b1fa?',
 			setDeathCases,
 			true,
 			localData.deaths,

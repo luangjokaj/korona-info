@@ -1,6 +1,6 @@
 export const localData = {
 	cases: 2893,
-	deaths: 188,
+	deaths: 45,
 	recovered: 809,
 	hospitalized: 188,
 	surveillanced: 3846,

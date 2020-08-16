@@ -3,133 +3,133 @@
 		[
 			[
 				"Andrijevica Municipality",
-				"138",
+				"99",
 				"Stopa aktivnih slučajeva COVID-19 na 100.000 ljudi",
 				"42.7211 19.7595",
 				"Andrijevica"
 			],
 			[
 				"Bar Municipality",
-				"228",
+				"197",
 				"Stopa aktivnih slučajeva COVID-19 na 100.000 ljudi",
 				"42.1353 19.1477",
 				"Bar"
 			],
 			[
 				"Berane Municipality",
-				"303",
+				"215",
 				"Stopa aktivnih slučajeva COVID-19 na 100.000 ljudi",
 				"42.8307 19.8574",
 				"Berane"
 			],
 			[
 				"Bijelo Polje Municipality",
-				"302",
+				"295",
 				"Stopa aktivnih slučajeva COVID-19 na 100.000 ljudi",
 				"43.0633 19.7179",
 				"Bijelo Polje"
 			],
 			[
 				"Budva Municipality",
-				"505",
+				"255",
 				"Stopa aktivnih slučajeva COVID-19 na 100.000 ljudi",
 				"42.2598 18.9044",
 				"Budva"
 			],
 			[
 				"Cetinje Municipality",
-				"384",
+				"126",
 				"Stopa aktivnih slučajeva COVID-19 na 100.000 ljudi",
 				"42.4696 18.9076",
 				"Cetinje"
 			],
 			[
 				"Danilovgrad Municipality",
-				"5",
+				"0",
 				"Stopa aktivnih slučajeva COVID-19 na 100.000 ljudi",
 				"42.5939 19.1211",
 				"Danilovgrad"
 			],
 			[
 				"Gusinje Municipality",
-				"307",
+				"94",
 				"Stopa aktivnih slučajeva COVID-19 na 100.000 ljudi",
 				"42.5417 19.8314",
 				"Gusinje"
 			],
 			[
 				"Herceg Novi Municipality",
-				"136",
+				"32",
 				"Stopa aktivnih slučajeva COVID-19 na 100.000 ljudi",
 				"42.5043 18.5172",
 				"Herceg Novi"
 			],
 			[
 				"Kolašin Municipality",
-				"12",
+				"60",
 				"Stopa aktivnih slučajeva COVID-19 na 100.000 ljudi",
 				"42.7915 19.3417",
 				"Kolašin"
 			],
 			[
 				"Kotor Municipality",
-				"389",
+				"142",
 				"Stopa aktivnih slučajeva COVID-19 na 100.000 ljudi",
 				"42.4736 18.7022",
 				"Kotor"
 			],
 			[
 				"Mojkovac Municipality",
-				"35",
+				"70",
 				"Stopa aktivnih slučajeva COVID-19 na 100.000 ljudi",
 				"42.9797 19.4748",
 				"Mojkovac"
 			],
 			[
 				"Nikšić Municipality",
-				"311",
+				"144",
 				"Stopa aktivnih slučajeva COVID-19 na 100.000 ljudi",
 				"42.8377 18.7224",
 				"Nikšić"
 			],
 			[
 				"Petnjica Municipality",
-				"18",
+				"36",
 				"Stopa aktivnih slučajeva COVID-19 na 100.000 ljudi",
 				"42.9354 20.0038",
 				"Petnjica"
 			],
 			[
 				"Plav Municipality",
-				"31",
+				"61",
 				"Stopa aktivnih slučajeva COVID-19 na 100.000 ljudi",
 				"42.616 19.9745",
 				"Plav"
 			],
 			[
 				"Pljevlja Municipality",
-				"224",
+				"153",
 				"Stopa aktivnih slučajeva COVID-19 na 100.000 ljudi",
 				"43.3172 19.2527",
 				"Pljevlja"
 			],
 			[
 				"Plužine Municipality",
-				"62",
+				"92",
 				"Stopa aktivnih slučajeva COVID-19 na 100.000 ljudi",
 				"43.1484 18.8471",
 				"Plužine"
 			],
 			[
 				"Podgorica Municipality",
-				"485",
+				"205",
 				"Stopa aktivnih slučajeva COVID-19 na 100.000 ljudi",
 				"42.5068 19.3506",
 				"Podgorica"
 			],
 			[
 				"Rožaje Municipality",
-				"523",
+				"183",
 				"Stopa aktivnih slučajeva COVID-19 na 100.000 ljudi",
 				"42.8607 20.1769",
 				"Rožaje"
@@ -143,28 +143,28 @@
 			],
 			[
 				"Tivat Municipality",
-				"257",
+				"7",
 				"Stopa aktivnih slučajeva COVID-19 na 100.000 ljudi",
 				"42.4126 18.6937",
 				"Tivat"
 			],
 			[
 				"Tuzi Municipality",
-				"13",
+				"7",
 				"Stopa aktivnih slučajeva COVID-19 na 100.000 ljudi",
 				"42.3943 19.4057",
 				"Tuzi"
 			],
 			[
 				"Ulcinj Municipality",
-				"105",
+				"195",
 				"Stopa aktivnih slučajeva COVID-19 na 100.000 ljudi",
 				"41.9657 19.2905",
 				"Ulcinj"
 			],
 			[
 				"Žabljak Municipality",
-				"84",
+				"56",
 				"Stopa aktivnih slučajeva COVID-19 na 100.000 ljudi",
 				"43.1296 19.172",
 				"Žabljak"
@@ -195,5 +195,5 @@
 		"Glavni grafikon od 10.06.",
 		"PO OPŠTINAMA GRAFIKON"
 	],
-	"refreshed": 1595866548081
+	"refreshed": 1597571631522
 }

@@ -2,8 +2,8 @@
 	"data": [
 		[
 			["", "Broj oboljelih"],
-			["Muškarci", "1558"],
-			["Žene", "1335"]
+			["Muškarci", "2082"],
+			["Žene", "1860"]
 		]
 	],
 	"sheetNames": ["BR. POL"],
@@ -30,5 +30,5 @@
 		"Glavni grafikon od 10.06.",
 		"PO OPŠTINAMA GRAFIKON"
 	],
-	"refreshed": 1595866669064
+	"refreshed": 1597571674229
 }

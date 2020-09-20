@@ -30,24 +30,12 @@ function Header() {
 		await fetch('https://corona.lmao.ninja/v2/historical/montenegro')
 			.then((response) => response.json())
 			.then((data) => {
-				Object.keys(data.timeline.cases).map(function (key) {
-					arr.push({ x: key, y: data.timeline.cases[key] });
-					return arr;
-				});
-				const filtered = arr.filter(function (el: any) {
-					return el.y > 0;
-				});
-				setPrevDate(filtered.slice(-1)[0].y);
+				const obj = data.timeline.cases;
+				setPrevDate(obj[Object.keys(obj)[Object.keys(obj).length - 1]]);
 			})
 			.catch(function () {
-				Object.keys(historicalData.timeline.cases).map(function (key) {
-					arr.push({ x: key, y: historicalData.timeline.cases[key] });
-					return arr;
-				});
-				const filtered = arr.filter(function (el: any) {
-					return el.y > 0;
-				});
-				setPrevDate(filtered.slice(-1)[0].y);
+				const obj = historicalData.timeline.cases;
+				setPrevDate(obj[Object.keys(obj)[Object.keys(obj).length - 1]]);
 				console.log('Error fetching data 🚨');
 			});
 	};

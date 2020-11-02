@@ -28,14 +28,9 @@ const Home = () => {
 
 	return (
 		<>
-			<Header />
+		<Header />
 			<Container className={styles.graphContainer}>
 				<Row justifyContent="flex-start">
-					<Growth xs={12} lg={6} loaded={loaded} />
-					<GoogleMap xs={12} lg={6} loaded={loaded} />
-					<Cities xs={12} lg={12} loaded={loaded} />
-					<Gender xs={12} lg={2} loaded={loaded} />
-					<Age xs={12} lg={10} loaded={loaded} />
 					<Ijzcg xs={12} lg={12} />
 					<Contact xs={12} lg={4} />
 					<TwitterFeed />
@@ -52,14 +47,14 @@ const Home = () => {
 					<Country
 						xs={6}
 						lg={4}
-						countrySlug="albania"
-						countryFlag="albania"
+						countrySlug="montenegro"
+						countryFlag="montenegro"
 					/>
 					<Country
 						xs={6}
 						lg={4}
-						countrySlug="bulgaria"
-						countryFlag="bulgaria"
+						countrySlug="albania"
+						countryFlag="albania"
 					/>
 					<Country
 						xs={6}

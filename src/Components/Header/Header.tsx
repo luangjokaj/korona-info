@@ -17,12 +17,7 @@ const styles = require('./Header.css');
 function Header() {
 	const [loaded, setLoaded] = useState<any>(false);
 	const [prevDate, setPrevDate] = useState<any>(null);
-	const [cases, setCases] = useState<any>(null);
-	const [deathCases, setDeathCases] = useState<any>(null);
-	const [testCases, setTestCases] = useState<any>(null);
-	const [recovered, setRecovered] = useState<any>(null);
-	const [hospitalized, setHospitalized] = useState<any>(null);
-	const [surveillanced, setSurveillanced] = useState<any>(null);
+	const [data, setData] = useState<any>(null);
 	const [washHands, setWashHands] = useState<any>(false);
 
 	const loadPostsHistory = async () => {
@@ -40,73 +35,22 @@ function Header() {
 			});
 	};
 
-	const loadTests = async () => {
+	const loadData = async () => {
 		await fetch('https://corona.lmao.ninja/v2/countries/montenegro')
 			.then((response) => response.json())
 			.then((data) => {
-				setTestCases(data.tests);
+				setData(data);
+				console.log(data);
 			})
 			.catch(function () {
-				setTestCases(localData.tests);
-				console.log('Error fetching data 🚨');
-			});
-	};
-
-	const loadData = async (
-		API: string,
-		func: any,
-		convert: boolean,
-		local: any,
-	) => {
-		await fetch(API)
-			.then((response) => response.json())
-			.then((data) => {
-				if (convert) {
-					const convertedType = parseInt(data.data[0][0][0]);
-					func(convertedType);
-				} else {
-					func(data.data[0][0][0]);
-				}
-			})
-			.catch(function () {
-				func(local);
+				setData({});
 				console.log('Error fetching data 🚨');
 			});
 	};
 
 	async function triggerQuery() {
 		await loadPostsHistory();
-		await loadTests();
-		await loadData(
-			'https://e.infogram.com/api/live/flex/ce347836-1eae-4cc2-af3a-92dbe813adcb/475f88b0-e616-47a8-b886-d6fe3a869e3a?',
-			setCases,
-			true,
-			localData.cases,
-		);
-		await loadData(
-			'https://e.infogram.com/api/live/flex/ce347836-1eae-4cc2-af3a-92dbe813adcb/3bce4506-be21-43b8-9a1a-08db9314b1fa?',
-			setDeathCases,
-			true,
-			localData.deaths,
-		);
-		await loadData(
-			'https://e.infogram.com/api/live/flex/ce347836-1eae-4cc2-af3a-92dbe813adcb/eba3f530-8a05-44d0-ac6b-0ab645c78011?',
-			setRecovered,
-			true,
-			localData.recovered,
-		);
-		await loadData(
-			'https://e.infogram.com/api/live/flex/ce347836-1eae-4cc2-af3a-92dbe813adcb/73a47eb3-8913-43fa-a257-760062a98bd3?',
-			setHospitalized,
-			true,
-			localData.hospitalized,
-		);
-		await loadData(
-			'https://e.infogram.com/api/live/flex/ce347836-1eae-4cc2-af3a-92dbe813adcb/5fd0db95-90b4-41d5-814a-58850cc4808d?',
-			setSurveillanced,
-			true,
-			localData.surveillanced,
-		);
+		await loadData();
 		setLoaded(true);
 	}
 
@@ -171,11 +115,7 @@ function Header() {
 											<span>
 												Slučajevi • Cases • Rastet
 											</span>{' '}
-											<strong>
-												{cases > localData.cases
-													? cases
-													: localData.cases}
-											</strong>
+											<strong>{data.cases}</strong>
 										</em>
 									</li>
 									<li className={styles.today}>
@@ -184,10 +124,7 @@ function Header() {
 										<em>
 											<span>Danas • Today • Sot</span>{' '}
 											<strong>
-												{cases >= localData.cases
-													? cases - prevDate
-													: localData.cases -
-													  prevDate}
+												{data.todayCases}
 											</strong>
 										</em>
 									</li>
@@ -198,9 +135,7 @@ function Header() {
 												Umrlih • Deaths • Vdekje
 											</span>{' '}
 											<strong>
-												{deathCases >= localData.deaths
-													? deathCases
-													: localData.deaths}
+												<strong>{data.deaths}</strong>
 											</strong>
 										</em>
 									</li>
@@ -211,22 +146,17 @@ function Header() {
 												Oporavljeni • Recovered • Të
 												shëruar
 											</span>{' '}
-											<strong>
-												{recovered >=
-												localData.recovered
-													? recovered
-													: localData.recovered}
-											</strong>
+											<strong>{data.recovered}</strong>
 										</em>
 									</li>
 									<li className={styles.item}>
 										<Icon type="hospitalized" />
 										<em>
 											<span>
-												Hospitalizovanih • Hospitalized
-												• Në spital
+											Kritični • Critical
+												• Kritik
 											</span>{' '}
-											<strong>{hospitalized}</strong>
+											<strong>{data.critical}</strong>
 										</em>
 									</li>
 									<li className={styles.item}>
@@ -237,36 +167,8 @@ function Header() {
 												infektuar
 											</span>{' '}
 											<strong>
-												{cases >= localData.cases
-													? cases -
-													  (localData.deaths >
-													  deathCases
-															? localData.deaths
-															: deathCases) -
-													  (localData.recovered >
-													  recovered
-															? localData.recovered
-															: recovered)
-													: localData.cases -
-													  (localData.deaths >
-													  deathCases
-															? localData.deaths
-															: deathCases) -
-													  (localData.recovered >
-													  recovered
-															? localData.recovered
-															: recovered)}
+												<strong>{data.active}</strong>
 											</strong>
-										</em>
-									</li>
-									<li className={styles.item}>
-										<Icon type="surveillanced" />
-										<em>
-											<span>
-												Pod nadzorom • Surveillanced •
-												Në vëzhgim
-											</span>{' '}
-											<strong>{surveillanced}</strong>
 										</em>
 									</li>
 									<li className={styles.item}>
@@ -275,7 +177,7 @@ function Header() {
 											<span>
 												Testirani • Tested • Të testuar
 											</span>{' '}
-											<strong>{testCases}</strong>
+											<strong>{data.tests}</strong>
 										</em>
 									</li>
 								</ul>
